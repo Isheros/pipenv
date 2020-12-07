@@ -516,7 +516,7 @@ def ensure_virtualenv(three=None, python=None, site_packages=None, pypi_mirror=N
             cleanup_virtualenv(bare=False)
             sys.exit(1)
     # If --three, --two, or --python were passed...
-    elif (python) or (three is not None) or (site_packages is not None):
+    elif (python) or (three is not None):
         USING_DEFAULT_PYTHON = False
         # Ensure python is installed before deleting existing virtual env
         python = ensure_python(three=three, python=python)
